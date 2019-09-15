@@ -4,26 +4,8 @@ import Archive from './pages/Archive/Archive';
 import AboutUs from './pages/AboutUs/AboutUs';
 import Details from './pages/Details/Details';
 import ArticleCard from './pages/ArticleCard/ArticleCard';
-import issueListJson from './data/issueList.json';
-
-let routerList = [];
 
 class BasicRoute extends React.Component{
-    constructor(props){
-        super(props);
-    }
-    componentDidMount() {
-        routerList = this.getIssueList();
-    }
-
-    getIssueList() {
-        if (issueListJson.code === 0) {
-            const data = issueListJson.data;
-            return data;
-        }
-        return [];
-    }
-
     render() {
         return (
             <HashRouter>

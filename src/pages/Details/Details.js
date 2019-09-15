@@ -27,8 +27,7 @@ class Details extends React.Component{
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
-
-            }).then(response => response.json())//解析为Promise
+            }).then(response => response.json()) //解析为Promise
                 .then(data => {
                     issue = data.data;
                     this.setState({
